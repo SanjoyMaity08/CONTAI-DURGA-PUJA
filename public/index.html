@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>কন্টাই দুর্গোৎসব | Contai Durga Puja 2026</title>
+<meta name="description" content="কন্টাইয়ের প্যান্ডেল, রুট, স্মৃতি ও সুর — এক ছাদের নিচে।">
+
+<!-- Open Graph / social share preview -->
+<!-- ⚠️ AFTER DEPLOYING: replace the two "assets/..." image paths below with the FULL
+     URL, e.g. https://your-app.onrender.com/assets/pandal-pukurpar.jpg
+     Relative paths don't work for social-media link previews. -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="কন্টাই দুর্গোৎসব | Contai Durga Puja 2026">
+<meta property="og:description" content="কন্টাইয়ের ১৫টি প্যান্ডেল, জোন-ভিত্তিক রুট, স্মৃতি, প্রেমের গল্প, কবিতা ও সুর — একটাই ডিজিটাল ঠিকানায়।">
+<meta property="og:image" content="assets/pandal-pukurpar.jpg">
+<meta property="og:locale" content="bn_IN">
+
+<!-- Twitter/X card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="কন্টাই দুর্গোৎসব | Contai Durga Puja 2026">
+<meta name="twitter:description" content="কন্টাইয়ের প্যান্ডেল, রুট, স্মৃতি ও সুর — এক ছাদের নিচে।">
+<meta name="twitter:image" content="assets/pandal-pukurpar.jpg">
+<meta name="theme-color" content="#160B24">
+<link rel="icon" href="assets/durga-mukh.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500;600;700;800&family=Hind+Siliguri:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== Festival welcome experience (shown on every visit) ===== -->
+<div class="welcome-overlay is-open" id="welcomeOverlay" aria-hidden="false">
+  <div class="welcome-petals" id="welcomePetals" aria-hidden="true"></div>
+  <div class="welcome-orbit welcome-orbit-one" aria-hidden="true"></div>
+  <div class="welcome-orbit welcome-orbit-two" aria-hidden="true"></div>
+  <div class="welcome-card">
+    <div class="welcome-diya-wrap" aria-hidden="true"><span class="welcome-diya">🪔</span><span class="diya-glow"></span></div>
+    <p class="eyebrow">CONTAI DURGA PUJA 2026</p>
+    <h2>শুভ আগমন</h2>
+    <div class="welcome-divider"><span>✦</span><span>❈</span><span>✦</span></div>
+    <p class="welcome-message">শারদীয়ার আলোয় কাশফুলের গন্ধে আর ঢাকের আওয়াজে, চলুন একসঙ্গে মেতে ওঠা যাক কাঁথির পুজো উৎসবে!</p>
+    <button class="btn btn-primary welcome-enter" id="enterPujaBtn" type="button">উৎসবে প্রবেশ করুন <span>✦</span></button>
+    <small class="welcome-note">আলো, আনন্দ আর স্মৃতির উৎসবে স্বাগতম</small>
+  </div>
+</div>
+
+<div class="beat-rings" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+<!-- Ambient Puja theme: autoplay + loop. Browsers may block audible autoplay until the first user gesture. -->
+<audio id="pujaTheme" src="assets/ashiner-sharodo-prate-original.mp3" autoplay loop muted preload="auto"></audio>
+<button class="sound-toggle" id="soundToggle" type="button" aria-pressed="false" title="শারদীয় আবৃত্তি চালু/বন্ধ">🔇 <span>শারদীয় আবৃত্তি</span></button>
+<div class="theme-caption" aria-label="পটভূমির শারদীয় আবৃত্তি">
+  <span>“আশ্বিনের শারদপ্রাতে বেজে উঠেছে আলোক-মঞ্জীর…”</span>
+  <small>কণ্ঠ: বীরেন্দ্রকৃষ্ণ ভদ্র</small>
+</div>
+
+<!-- ===== Nav ===== -->
+<header class="site-nav" id="siteNav">
+  <a class="brand" href="#top">
+    <img src="assets/durga-mukh.png" alt="" class="brand-mark">
+    <span class="brand-text">কন্টাই <em>দুর্গোৎসব</em></span>
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="মেনু খুলুন" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="nav-links" id="navLinks">
+    <a href="#pandals">প্যান্ডেল</a>
+    <a href="#smart-planner">স্মার্ট প্ল্যানার</a>
+    <a href="#map">ইন্টার‍্যাক্টিভ ম্যাপ</a>
+    <a href="#passport">পুজো পাসপোর্ট</a>
+    <a href="#awards">অ্যাওয়ার্ডস</a>
+    <a href="#routes">রুট লুপ</a>
+    <a href="#timeline">টাইমলাইন</a>
+    <a href="#logistics">ট্রাভেল ও সেফটি</a>
+    <a href="#voices">স্মৃতি ও গল্প</a>
+    <a href="#poems">কবিতা</a>
+    <a href="#gallery">গ্যালারি</a>
+    <a href="#songs">প্লেলিস্ট</a>
+    <a href="#share" class="nav-cta">গল্প জমা দিন</a>
+  </nav>
+</header>
+
+<!-- ===== Festival experience controls ===== -->
+<button class="puja-mode-btn" id="pujaModeBtn" type="button" aria-pressed="false" title="উৎসবের বিশেষ মোড">🪔 <span>পুজো মোড</span></button>
+
+<!-- ===== Floating Contact Tab ===== -->
+<aside class="contact-drawer" id="contactDrawer" aria-label="যোগাযোগ">
+  <button class="contact-tab" id="contactTab" type="button" aria-expanded="false" aria-controls="contactPanel">
+    <span class="contact-tab-icon" aria-hidden="true">✦</span>
+    <span>যোগাযোগ</span>
+  </button>
+  <div class="contact-panel" id="contactPanel">
+    <div class="contact-panel-glow" aria-hidden="true"></div>
+    <p class="contact-kicker">DIGITAL PUJA 2026</p>
+    <h2>যোগাযোগ</h2>
+    <div class="contact-divider"></div>
+    <div class="contact-detail">
+      <span class="contact-label">Created By</span>
+      <strong>Sanjoy Miaity</strong>
+    </div>
+    <a class="contact-link" href="mailto:smaity2358@gmail.com">
+      <span class="contact-link-icon">✉</span>
+      <span><small>G.mail</small><b>smaity2358@gmail.com</b></span>
+    </a>
+    <a class="contact-link" href="https://www.linkedin.com/in/sanjoy-maity-92669a278" target="_blank" rel="noopener noreferrer">
+      <span class="contact-link-icon">in</span>
+      <span><small>LinkedIn</small><b>Sanjoy Maity ↗</b></span>
+    </a>
+    <a class="contact-link" href="https://github.com/SanjoyMaity08" target="_blank" rel="noopener noreferrer">
+      <span class="contact-link-icon">⌘</span>
+      <span><small>GitHub</small><b>SanjoyMaity08 ↗</b></span>
+    </a>
+  </div>
+</aside>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <p class="eyebrow">পূর্ব মেদিনীপুর · উপকূলীয় বাংলা</p>
+    <h1>কন্টাইয়ের গলিতে গলিতে<br><span class="accent">শরতের আলো</span></h1>
+    <p class="hero-sub">মহালয়া থেকে বিজয়া — কন্টাই ও তার আশপাশের প্যান্ডেল, জোন-ভিত্তিক রুট, পুরনো স্মৃতি, প্রেমের গল্প, কবিতা আর সুরের একটাই ডিজিটাল ঠিকানা।</p>
+    <div class="hero-cta-row">
+      <a href="#pandals" class="btn btn-primary">প্যান্ডেল দেখুন</a>
+      <a href="#routes" class="btn btn-ghost">স্মার্ট রুট লুপ</a>
+    </div>
+    <div class="hero-stats">
+      <div><strong id="statPandals">—</strong><span>প্যান্ডেল কভার</span></div>
+      <div><strong id="statZones">—</strong><span>জোন ম্যাপড</span></div>
+      <div><strong id="statLoops">—</strong><span>রেডিমেড রুট লুপ</span></div>
+    </div>
+    <div class="puja-countdown" id="mainCountdown" aria-live="polite">
+      <div class="countdown-kicker">পুজো শুরু হতে বাকি</div>
+      <div class="countdown-grid">
+        <div><strong id="mainDays">—</strong><span>দিন</span></div>
+        <div><strong id="mainHours">—</strong><span>ঘণ্টা</span></div>
+        <div><strong id="mainMinutes">—</strong><span>মিনিট</span></div>
+        <div><strong id="mainSeconds">—</strong><span>সেকেন্ড</span></div>
+      </div>
+      <div class="countdown-target" id="mainCountdownTarget">মহা পঞ্চমী • ১৬ অক্টোবর ২০২৬</div>
+    </div>
+    <div class="today-puja-card" id="todayPujaCard" aria-live="polite">
+      <div class="today-puja-badge">আজকের পুজো</div>
+      <div>
+        <h3 id="todayPujaTitle">লোড হচ্ছে…</h3>
+        <p id="todayPujaText">আজকের পূজা-তথ্য প্রস্তুত করা হচ্ছে।</p>
+      </div>
+      <span class="today-puja-count" id="todayPujaCount"></span>
+    </div>
+  </div>
+
+  <div class="hero-figure">
+    <div class="idol-frame">
+      <img src="assets/durga-idol.jpg" alt="কন্টাইয়ের একটি প্যান্ডেলের দুর্গা প্রতিমা">
+      <span class="idol-glow" aria-hidden="true"></span>
+      <span class="diya diya-a" aria-hidden="true"></span>
+      <span class="diya diya-b" aria-hidden="true"></span>
+    </div>
+  </div>
+
+  <svg class="hero-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,40 C240,90 480,0 720,30 C960,60 1200,10 1440,45 L1440,90 L0,90 Z"></path>
+  </svg>
+</section>
+
+<!-- ===== Pandal Directory ===== -->
+<section class="section" id="pandals">
+  <div class="section-head">
+    <p class="eyebrow">জোন-ভিত্তিক প্যান্ডেল হপিং</p>
+    <h2 id="pandalCountHeading">কন্টাইয়ের প্যান্ডেল, জোনে জোনে</h2>
+    <p class="section-sub">শহরের ভৌগোলিক বিন্যাস অনুযায়ী সাজানো — যাতে কোন দিক থেকে এলে কোন প্যান্ডেল আগে পড়বে, তা এক নজরে বোঝা যায়। প্রতিটা প্যান্ডেলে ❤ চেপে ভোট দিন — গণনা সরাসরি সার্ভারে জমা হয়।</p>
+  </div>
+  <div class="pandal-toolbar">
+    <label class="pandal-search" for="pandalSearch"><span aria-hidden="true">⌕</span><input id="pandalSearch" type="search" placeholder="প্যান্ডেল, এলাকা বা থিম খুঁজুন…" autocomplete="off"><button id="clearPandalSearch" type="button" aria-label="সার্চ পরিষ্কার করুন">×</button></label>
+    <span class="search-result-count" id="searchResultCount"></span>
+  </div>
+  <div class="zone-tabs" id="zoneTabs" role="tablist" aria-label="পুজো জোন"></div>
+  <div class="pandal-grid" id="pandalGrid"><div class="skeleton-row"></div></div>
+</section>
+
+<!-- ===== Interactive Pandal Map ===== -->
+<section class="section section-map" id="map">
+  <div class="section-head">
+    <p class="eyebrow">ইন্টার‍্যাক্টিভ প্যান্ডেল ম্যাপ</p>
+    <h2>মানচিত্রে পুজোর পথ</h2>
+    <p class="section-sub">একটি প্যান্ডেল বেছে নিন — সঙ্গে সঙ্গে তার লোকেশন সার্চ, ডিরেকশন ও পুজো পাসপোর্টে যোগ করার অপশন দেখুন।</p>
+  </div>
+  <div class="map-explorer">
+    <div class="map-explorer-frame">
+      <iframe id="pandalMapFrame" title="কন্টাই প্যান্ডেল ইন্টার‍্যাক্টিভ ম্যাপ" src="https://www.google.com/maps?q=Contai,+West+Bengal&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="map-explorer-side">
+      <div class="map-selected" id="mapSelected">
+        <p class="eyebrow">নির্বাচিত প্যান্ডেল</p>
+        <h3 id="mapPandalName">একটি প্যান্ডেল বেছে নিন</h3>
+        <p id="mapPandalMeta">প্যান্ডেলের নামের উপর চাপ দিলে এখানে লোকেশন ও দ্রুত অ্যাকশন দেখাবে।</p>
+      </div>
+      <div class="map-pandal-list" id="mapPandalList"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Puja Passport ===== -->
+<section class="section section-passport" id="passport">
+  <div class="section-head">
+    <p class="eyebrow">আমার পুজো ২০২৬</p>
+    <h2>ফেভারিট + পুজো পাসপোর্ট</h2>
+    <p class="section-sub">যে প্যান্ডেলগুলো দেখতে চান বা দেখে ফেলেছেন, সেগুলো আপনার নিজের ডিভাইসে সেভ করুন।</p>
+  </div>
+  <div class="passport-card">
+    <div class="passport-summary">
+      <div><span class="passport-label">পছন্দ</span><strong id="passportFavCount">০</strong></div>
+      <div><span class="passport-label">দেখা হয়েছে</span><strong id="passportVisitedCount">০</strong></div>
+      <div><span class="passport-label">মোট প্যান্ডেল</span><strong id="passportTotalCount">০</strong></div>
+      <div class="passport-progress-wrap"><span class="passport-label">পুজো পাসপোর্ট</span><div class="passport-progress"><span id="passportProgressBar"></span></div><small id="passportProgressText">০% সম্পূর্ণ</small></div>
+    </div>
+    <div class="passport-actions"><button class="btn btn-ghost" id="clearPassportBtn" type="button">পাসপোর্ট রিসেট</button><a class="btn btn-primary" href="#pandals">প্যান্ডেল বেছে নিন</a></div>
+  </div>
+</section>
+
+<!-- ===== Smart Visit Planner ===== -->
+<section class="section smart-planner-section" id="smart-planner">
+  <div class="section-head">
+    <p class="eyebrow">SMART PUJA ASSISTANT</p>
+    <h2>আপনার পুজো, আপনার প্ল্যান</h2>
+    <p class="section-sub">ফেভারিট প্যান্ডেল থেকে নিজের ভিজিট লিস্ট বানান, লোকেশন ব্যবহার করে ন্যাভিগেশন শুরু করুন, আর এক নজরে দেখুন আজ আপনার পুজো কতটা এগিয়েছে।</p>
+  </div>
+  <div class="smart-dashboard">
+    <article class="smart-card smart-card--planner">
+      <div class="smart-card-icon">🧭</div>
+      <div>
+        <p class="eyebrow">MY VISIT PLAN</p>
+        <h3 id="plannerTitle">পুজো প্ল্যান তৈরি করুন</h3>
+        <p id="plannerSummary">প্যান্ডেল সেকশনে ★ ফেভারিট চাপুন। আপনার পছন্দের প্যান্ডেলগুলো এখানে সাজানো হবে।</p>
+      </div>
+      <div class="planner-actions">
+        <button class="btn btn-primary" id="nearMeBtn" type="button">📍 আমার লোকেশন ব্যবহার করুন</button>
+        <button class="btn btn-ghost" id="planDirectionsBtn" type="button">🗺️ প্ল্যান অনুযায়ী ডিরেকশন</button>
+      </div>
+      <div class="planner-status" id="plannerStatus" aria-live="polite"></div>
+      <ol class="planner-list" id="plannerList"></ol>
+    </article>
+    <article class="smart-card smart-card--passport">
+      <div class="smart-card-icon">🎟️</div>
+      <p class="eyebrow">DIGITAL PUJA PASSPORT</p>
+      <h3 id="passportLevel">Puja Explorer · Level 1</h3>
+      <p id="passportLevelText">আপনার ভিজিট করা প্যান্ডেলগুলো থেকে ব্যাজ আনলক হবে।</p>
+      <div class="passport-stamp-grid" id="passportStampGrid"></div>
+      <div class="smart-level-progress"><span id="smartLevelBar"></span></div>
+      <small id="smartLevelHint">প্রথম ব্যাজ পেতে একটি প্যান্ডেল ভিজিট করুন।</small>
+    </article>
+  </div>
+</section>
+
+<!-- ===== People's Choice Awards ===== -->
+<section class="section section-dark awards-section" id="awards">
+  <div class="section-head">
+    <p class="eyebrow">PEOPLE'S CHOICE 2026</p>
+    <h2>প্যান্ডেল অ্যাওয়ার্ডস</h2>
+    <p class="section-sub">আপনার পছন্দের প্যান্ডেলকে আলাদা আলাদা ক্যাটেগরিতে ভোট দিন। ভোট এই ডিভাইসে মনে রাখা হবে, যাতে একই ক্যাটেগরিতে বারবার ভোট না যায়।</p>
+  </div>
+  <div class="awards-grid" id="awardsGrid"></div>
+</section>
+
+<!-- ===== Smart Route Loops ===== -->
+<section class="section section-dark" id="routes">
+  <div class="section-head">
+    <p class="eyebrow">Smart Route Loops</p>
+    <h2>একটানা ঘুরে দেখার তিনটি রুট</h2>
+    <p class="section-sub">আপনি কোথা থেকে আসছেন আর কী ধরনের প্যান্ডেল পছন্দ করেন, তার উপর ভিত্তি করে বেছে নিন আপনার লুপ।</p>
+  </div>
+  <div class="loop-tabs" id="loopTabs" role="tablist" aria-label="রুট লুপ"></div>
+  <div class="loop-path" id="loopPath"></div>
+
+  <div class="live-map-block">
+    <div class="live-map-frame">
+      <iframe
+        title="কন্টাই মানচিত্র"
+        src="https://www.google.com/maps?q=Contai,+West+Bengal&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+    <div class="live-map-side">
+      <p class="eyebrow">লাইভ ন্যাভিগেশন</p>
+      <h3>সিলেক্ট করা লুপ ধরে সরাসরি গুগল ম্যাপে</h3>
+      <p class="live-map-note">নিচের বাটনে চাপলে বাছাই করা লুপের সবক'টা স্টপ ক্রমানুসারে জুড়ে গুগল ম্যাপ অ্যাপ/ওয়েবসাইটে খুলে যাবে — টার্ন-বাই-টার্ন ডিরেকশন সহ।</p>
+      <a href="#" id="loopDirectionsBtn" class="btn btn-primary" target="_blank" rel="noopener">এই লুপে ডিরেকশন খুলুন ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Timeline ===== -->
+<section class="section" id="timeline">
+  <div class="section-head">
+    <p class="eyebrow">দুর্গোৎসব ২০২৬</p>
+    <h2>মহালয়া থেকে বিজয়া দশমী</h2>
+    <p class="section-sub">২০২৬ সালের দিনগুলোর জন্য লাইভ কাউন্টডাউন — কলকাতা/ভারতীয় সময় (IST) অনুযায়ী প্রতি সেকেন্ডে আপডেট হবে। <span class="ist-clock" id="istClock">IST --:--:--</span></p>
+  </div>
+  <ol class="timeline" id="timelineList"></ol>
+</section>
+
+<!-- ===== Travel & Safety ===== -->
+<section class="section section-dark" id="logistics">
+  <div class="section-head">
+    <p class="eyebrow">লজিস্টিকস</p>
+    <h2>ট্রাভেল, পার্কিং ও সেফটি ইনফো</h2>
+    <p class="section-sub">যাওয়ার আগে এই তথ্যগুলো একবার দেখে নিন।</p>
+  </div>
+  <div class="logistics-grid">
+    <div class="logistics-card"><h3>প্রধান বাস স্টপ</h3><ul id="busStops"></ul></div>
+    <div class="logistics-card"><h3>অফিশিয়াল পার্কিং এরিয়া</h3><ul id="parkingAreas"></ul></div>
+    <div class="logistics-card logistics-card--emergency">
+      <h3>জরুরি হেল্পলাইন</h3>
+      <ul id="helplines"></ul>
+      <p class="verify-note">⚠️ নম্বরগুলো প্রকাশের আগে সংশ্লিষ্ট দফতর থেকে যাচাই করে নিন।</p>
+    </div>
+  </div>
+
+  <div class="travel-hub">
+    <div class="travel-hub-head">
+      <p class="eyebrow">LIVE TRAVEL HUB</p>
+      <h3>কন্টাই ↔ দিঘা — ক্যাব ও বাস বুকিং</h3>
+      <p>লাইভ ভাড়া/সিট/ETA তৃতীয়-পক্ষের সার্ভিস থেকে খোলে। নিচের বাটনগুলো আপনাকে অফিসিয়াল বুকিং অভিজ্ঞতায় নিয়ে যাবে।</p>
+    </div>
+    <div class="travel-grid">
+      <article class="travel-card">
+        <div class="travel-icon">🚕</div>
+        <div><h4>Ola</h4><p>কন্টাই থেকে ক্যাব বুকিং শুরু করুন।</p></div>
+        <a class="btn btn-primary travel-btn" href="https://book.olacabs.com/" target="_blank" rel="noopener">Ola বুক করুন ↗</a>
+      </article>
+      <article class="travel-card">
+        <div class="travel-icon">🚗</div>
+        <div><h4>Uber</h4><p>অফিসিয়াল Uber rider web experience খুলুন।</p></div>
+        <a class="btn btn-ghost travel-btn" href="https://m.uber.com/" target="_blank" rel="noopener">Uber বুক করুন ↗</a>
+      </article>
+      <article class="travel-card">
+        <div class="travel-icon">🏍️</div>
+        <div><h4>Rapido</h4><p>অফিসিয়াল Rapido — Bike, Auto ও Cab booking খুলুন।</p></div>
+        <a class="btn btn-ghost travel-btn" href="https://www.rapido.bike/" target="_blank" rel="noopener">Rapido খুলুন ↗</a>
+      </article>
+      <article class="travel-card travel-card--wide">
+        <div class="travel-icon">🚌</div>
+        <div class="travel-bus-main">
+          <h4>Contai (Kanthi) → Digha</h4>
+          <p>বর্তমান route listing-এ Contai Bus Stand/Contai Central Bus Stand থেকে Digha Bus Stand পর্যন্ত direct services দেখা যায়। booking provider-এর live availability অনুযায়ী সময়, সিট ও fare বদলাতে পারে।</p>
+          <div class="travel-meta"><span>📏 ~৩৫ কিমি</span><span>⏱️ গড় ~১ঘ ৮মি</span><span>🚌 ৫+ অপারেটর</span></div>
+        </div>
+        <a class="btn btn-primary travel-btn" id="busBookingBtn" href="https://www.redbus.in/bus-tickets/contai-kanthi-to-digha" target="_blank" rel="noopener">লাইভ বাস দেখুন ↗</a>
+      </article>
+    </div>
+    <div class="travel-tools">
+      <label>যাত্রার তারিখ
+        <input type="date" id="busDate">
+      </label>
+      <a class="map-link" id="contaiDighaMaps" href="https://www.google.com/maps/dir/Contai,+West+Bengal/Digha,+West+Bengal" target="_blank" rel="noopener">📍 Contai → Digha রুট ম্যাপ</a>
+      <span class="travel-disclaimer">লাইভ বুকিং সাইটে final price, seat availability, pickup/drop point ও timing যাচাই করুন।</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Memories / Love stories ===== -->
+<section class="section" id="voices">
+  <div class="section-head">
+    <p class="eyebrow">স্মৃতি ও প্রেমের গল্প</p>
+    <h2>কন্টাইয়ের গলিতে জমে থাকা মুহূর্ত</h2>
+    <p class="section-sub">পাঠকদের পাঠানো গল্প — সরাসরি ডেটাবেস থেকে লোড হচ্ছে, রিফ্রেশ করলেও থাকবে।</p>
+  </div>
+  <div class="voice-wall" id="voiceWall"><div class="skeleton-row"></div></div>
+</section>
+
+<!-- ===== Poems ===== -->
+<section class="section section-dark poem-section" id="poems">
+  <div class="section-head"><p class="eyebrow">মৌলিক কবিতা</p><h2>কবিতার পাতা</h2></div>
+  <figure class="poem-card">
+    <div class="alpona" aria-hidden="true"></div>
+    <blockquote id="poemText"></blockquote>
+    <figcaption id="poemAuthor"></figcaption>
+  </figure>
+  <div class="poem-submissions" id="poemSubmissions"></div>
+</section>
+
+<!-- ===== Gallery ===== -->
+<section class="section" id="gallery">
+  <div class="section-head">
+    <p class="eyebrow">ভিজিটর গ্যালারি</p>
+    <h2>আপনার চোখে কন্টাইয়ের পুজো</h2>
+    <p class="section-sub">আপনার তোলা প্যান্ডেল, প্রতিমা, আলো বা পুজোর মুহূর্ত শেয়ার করুন — ছবি সার্ভারে সেভ হয়ে সবার জন্য গ্যালারিতে দেখা যাবে।</p>
+  </div>
+
+  <form class="upload-form" id="uploadForm">
+    <input type="file" name="photo" id="photoInput" accept="image/*" required>
+    <input type="text" name="submitted_by" placeholder="আপনার নাম" required>
+    <input type="text" name="caption" placeholder="ছবির ক্যাপশন (ঐচ্ছিক)">
+    <button type="submit" class="btn btn-primary">ছবি আপলোড করুন</button>
+    <span class="form-note" id="uploadNote"></span>
+  </form>
+
+  <div class="gallery-grid" id="galleryGrid"><div class="skeleton-row"></div></div>
+</section>
+
+<!-- ===== Songs ===== -->
+<section class="section section-dark" id="songs">
+  <div class="section-head">
+    <p class="eyebrow">থিম মিউজিক প্লেলিস্ট</p>
+    <h2>পুজোর সুর</h2>
+    <p class="section-sub">অডিও ফাইল যোগ করার আগে পর্যন্ত, প্রতিটা গান তার নিজের প্ল্যাটফর্মে খুঁজে শোনার লিংক দেওয়া আছে।</p>
+  </div>
+  <ul class="song-list" id="songList"></ul>
+</section>
+
+<!-- ===== Mobile quick navigation ===== -->
+<nav class="mobile-bottom-nav" id="mobileBottomNav" aria-label="দ্রুত মোবাইল নেভিগেশন">
+  <a href="#top">⌂<span>হোম</span></a>
+  <a href="#pandals">🛕<span>প্যান্ডেল</span></a>
+  <a href="#map">🗺️<span>ম্যাপ</span></a>
+  <a href="#passport">❤️<span>পাসপোর্ট</span></a>
+  <a href="#logistics">🚕<span>ট্রাভেল</span></a>
+</nav>
+
+<!-- ===== Share your story ===== -->
+<section class="section share-section" id="share">
+  <div class="section-head">
+    <p class="eyebrow">অংশ নিন</p>
+    <h2>আপনার গল্প, ছবি বা কবিতা পাঠান</h2>
+    <p class="section-sub">এই ফর্মটি সরাসরি সার্ভারে ডেটা পাঠায় এবং সেখানে জমা থাকে — পেজ রিফ্রেশ করলেও হারাবে না।</p>
+  </div>
+  <form class="share-form" id="shareForm">
+    <div class="field-row">
+      <label>নাম<input type="text" name="name" required placeholder="আপনার নাম"></label>
+      <label>ধরন
+        <select name="type">
+          <option value="স্মৃতি">স্মৃতি</option>
+          <option value="প্রেমের গল্প">প্রেমের গল্প</option>
+          <option value="কবিতা">কবিতা</option>
+        </select>
+      </label>
+    </div>
+    <label class="field-full">লেখা<textarea name="text" rows="4" required placeholder="এখানে আপনার গল্প বা কবিতা লিখুন..."></textarea></label>
+    <button type="submit" class="btn btn-primary">জমা দিন</button>
+    <p class="form-note" id="formNote"></p>
+  </form>
+</section>
+
+<div class="shubho-sharodiya" aria-label="শুভ শারদীয়া উৎসব ২০২৬">
+  <span class="shubho-spark shubho-spark-a" aria-hidden="true">✦</span>
+  <span class="shubho-spark shubho-spark-b" aria-hidden="true">✧</span>
+  <span class="shubho-text">শুভ শারদীয়া উৎসব ২০২৬</span>
+  <span class="shubho-spark shubho-spark-c" aria-hidden="true">✦</span>
+  <span class="shubho-spark shubho-spark-d" aria-hidden="true">✧</span>
+</div>
+
+<button class="back-to-top" id="backToTop" type="button" aria-label="উপরে ফিরে যান">↑<span>উপরে</span></button>
+
+<footer class="site-footer">
+  <img src="assets/durga-mukh.png" alt="" class="footer-mark">
+  <p>কন্টাই দুর্গোৎসব &middot; একটি ভালোবাসার ডিজিটাল প্রজেক্ট &middot; ২০২৬</p>
+  <p class="footer-fine">প্যান্ডেল তথ্য, রুট ও কন্ট্যাক্ট নম্বর প্রকাশের আগে অনুগ্রহ করে নিজে যাচাই করে নিন।</p>
+</footer>
+
+<!-- ===== Lightbox for gallery photos ===== -->
+<div class="lightbox-overlay" id="lightboxOverlay">
+  <button class="lightbox-close" id="lightboxClose" aria-label="বন্ধ করুন">✕</button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="আগের ছবি">‹</button>
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="পরের ছবি">›</button>
+  <figure class="lightbox-figure">
+    <img id="lightboxImg" src="" alt="বড় আকারে ছবি">
+    <figcaption id="lightboxCaption"></figcaption>
+  </figure>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "contai-app",
+  "version": "1.0.0",
+  "description": "Contai (Kanthi) Durga Puja — full-stack pandal guide, memories wall and photo gallery.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.6.2",
+    "multer": "^2.2.0"
+  }
+}
